@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodels="clr-namespace:eOrdinacija.MobileApp.ViewModels" x:DataType="viewmodels:LoginViewModel"
+             Title="Login"
+             x:Class="eOrdinacija.MobileApp.Views.LoginPage"
+             BackgroundImage="back.jpg"
+             NavigationPage.HasNavigationBar="false"
+             Shell.NavBarIsVisible="False">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="labelStyle" TargetType="Label">
+                <Setter Property="FontFamily" Value="Tahoma" />
+                <Setter Property="TextColor" Value="white" />
+            </Style>
+            <Style x:Key="buttonStyle" TargetType="Button">
+                <Setter Property="CornerRadius" Value="5" />
+                <Setter Property="Margin" Value="0,10,0,0" />
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="FontFamily" Value="Tahoma" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout Padding="10,0,10,0" VerticalOptions="Center">
+            <Image Source="logo.png" Opacity="0.5"></Image>
+            <Label Text="Unesite korisničko ime" Style="{StaticResource labelStyle}" />
+            <Entry Placeholder="Korisničko ime" FontFamily="Tahoma" Text="{Binding Username}"></Entry>
+            <Label Text="Unesite lozinku" Style="{StaticResource labelStyle}"></Label>
+            <Entry Placeholder="Lozinka" IsPassword="True" FontFamily="Tahoma" Text="{Binding Password}"></Entry>
+            <Button Style="{StaticResource buttonStyle}" Text="Login" Command="{Binding LoginCommand}"/>
+            <Button Style="{StaticResource buttonStyle}" Text="Registracija" Clicked="OnRegistracijaClicked" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

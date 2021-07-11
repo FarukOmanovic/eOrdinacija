@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             BackgroundImage="back.jpg"
+             Title="Detalji usluge"
+             xmlns:vm="clr-namespace:eOrdinacija.MobileApp.ViewModels"
+             x:Class="eOrdinacija.MobileApp.Views.UslugaDetaljiPage">
+    <ContentPage.BindingContext>
+        <vm:UslugaDetaljiViewModel />
+    </ContentPage.BindingContext>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="labelStyleRow" TargetType="Label">
+                <Setter Property="FontFamily" Value="Tahoma" />
+                <Setter Property="FontSize" Value="18" />
+                <Setter Property="VerticalTextAlignment" Value="Center" />
+                <Setter Property="FontAttributes" Value="Bold" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout Margin="30,30,0,0">
+            <StackLayout HorizontalOptions="Start" >
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition  Width="Auto"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                </Grid>
+
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Usluga:" Grid.Row="0" Style="{StaticResource labelStyleRow}"/>
+                    <Label x:Name="Usluga" Text="{Binding Usluga.Naziv}" FontSize="18" Grid.Row="0"  Grid.Column="1"></Label>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Opis:" Grid.Row="1" Style="{StaticResource labelStyleRow}" />
+                    <Label x:Name="Opis" Text="{Binding Usluga.Opis}" FontSize="18" Grid.Row="1"  Grid.Column="2"></Label>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Cijena:   " Grid.Row="2" Style="{StaticResource labelStyleRow}" />
+                    <Label x:Name="Cijena" Text="{Binding Usluga.Cijena, Mode=OneWay, StringFormat='{0} KM'}" FontSize="18" Grid.Row="2" Grid.Column="3" ></Label>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Prosjecna ocjena:   " Grid.Row="3" Style="{StaticResource labelStyleRow}"/>
+                    <Label x:Name="Ocjena" Text="{Binding Usluga.ProsjecnaOcjena}" FontSize="18" Grid.Row="3" Grid.Column="4" ></Label>
+                </StackLayout>
+            </StackLayout>
+
+            <Label Text="Preporučujemo vam" FontSize="20" Margin="0,30,0,0" FontFamily="Tahoma" HorizontalTextAlignment="Start"/>
+            <ListView x:Name="RecommendedUslugeList" RowHeight="40" ItemTapped="RecommendedList_ItemTapped"  ItemsSource="{Binding RecommendedUslugeList}"   >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+
+                                <StackLayout Grid.Column="1" Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+                                    <Image Source="dentist.png"></Image>
+                                    <Label Text="{Binding Naziv}" FontAttributes="Bold" VerticalTextAlignment="Center"  WidthRequest="200" ></Label>
+                                    <StackLayout>
+                                        <Button CornerRadius="20" FontAttributes="Bold" TextColor="Black" HeightRequest="35" BackgroundColor="Gold"  Text="{Binding ProsjecnaOcjena}"></Button>
+                                    </StackLayout>
+                                </StackLayout>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <StackLayout Orientation="Horizontal"  Margin="20,0,0,30">
+                <Button Text="Zakaži pregled za odabranu uslugu" Clicked="Button_Zakazi_Clicked"  CornerRadius="5"></Button>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

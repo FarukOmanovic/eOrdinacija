@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:vm="clr-namespace:eOrdinacija.MobileApp.ViewModels"
+             Title="Usluge"
+             BackgroundImage="back.jpg"
+             x:Class="eOrdinacija.MobileApp.Views.UslugePage">
+    <ContentPage.BindingContext>
+        <vm:UslugaViewModel />
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout Padding="30">
+            <ListView x:Name="UslugeList" RowHeight="40" ItemsSource="{Binding UslugeList}"  ItemTapped="UslugeList_ItemTapped"  >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+
+                                <StackLayout Grid.Column="1" Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+                                    <Image Source="dentist.png"></Image>
+                                    <Label Text="{Binding Naziv}" FontAttributes="Bold" VerticalTextAlignment="Center"  WidthRequest="300" ></Label>
+                                    <StackLayout>
+                                        <Button CornerRadius="20" FontAttributes="Bold" TextColor="Black" HeightRequest="35" BackgroundColor="Gold"  Text="{Binding ProsjecnaOcjena}"></Button>
+                                    </StackLayout>
+                                </StackLayout>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:viewmodels="clr-namespace:eOrdinacija.MobileApp.ViewModels" x:DataType="viewmodels:NoviTerminViewModel"
+             BackgroundImage="back.jpg"
+             Title="Novi termin"
+             x:Class="eOrdinacija.MobileApp.Views.NoviTerminPage">
+    <ContentPage.BindingContext>
+        <viewmodels:NoviTerminViewModel />
+    </ContentPage.BindingContext>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="labelStyle" TargetType="Label">
+                <Setter Property="FontFamily" Value="Tahoma" />
+                <Setter Property="TextColor" Value="Black" />
+            </Style>
+            <Style x:Key="entryLabel" TargetType="Entry">
+                <Setter Property="FontFamily" Value="Tahoma" />
+                <Setter Property="TextColor" Value="black" />
+            </Style>
+            <Style x:Key="buttonStyle" TargetType="Button">
+                <Setter Property="CornerRadius" Value="5" />
+                <Setter Property="Margin" Value="0,10,0,0" />
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="FontFamily" Value="Tahoma" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Padding="20" VerticalOptions="Center">
+                <Label Style="{StaticResource labelStyle}">Izaberite uslugu</Label>
+                <Picker ItemsSource="{Binding UslugaLista}" ItemDisplayBinding="{Binding Naziv}" SelectedItem="{Binding SelectedUsluga}"></Picker>
+                <Label Style="{StaticResource labelStyle}">Datum</Label>
+                <DatePicker Date="{Binding Datum}" MinimumDate="{Binding MinDate}"></DatePicker>
+                <Label Style="{StaticResource labelStyle}">Vrijeme</Label>
+                <TimePicker Time="{Binding Vrijeme}"></TimePicker>
+
+                <Button Style="{StaticResource buttonStyle}" Text="Potvrdi" Command="{Binding PotvrdiCommand}" />
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:vm="clr-namespace:eOrdinacija.MobileApp.ViewModels"
+             BackgroundImage="back.jpg"
+             Title="Detalji pregleda"
+             x:Class="eOrdinacija.MobileApp.Views.PregledDetaljiPage">
+    <ContentPage.BindingContext>
+        <vm:PregledDetaljiViewModel />
+    </ContentPage.BindingContext>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="labelStyleRow" TargetType="Label">
+                <Setter Property="FontFamily" Value="Tahoma" />
+                <Setter Property="FontSize" Value="18" />
+                <Setter Property="VerticalTextAlignment" Value="Center" />
+                <Setter Property="FontAttributes" Value="Bold" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout Margin="30,30,0,0">
+            <Image Source="dental_care.png"></Image>
+
+            <StackLayout HorizontalOptions="Start" >
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition  Width="Auto"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+            </Grid>
+            
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Usluga:" Grid.Row="0" Style="{StaticResource labelStyleRow}"/>
+                    <Label x:Name="Usluga" Text="{Binding UslugaNaziv}" FontSize="18" Grid.Row="0"  Grid.Column="1"></Label>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Evidentirao zaposlenik:" Grid.Row="1" Style="{StaticResource labelStyleRow}" />
+                    <Label x:Name="Zaposlenik" Text="{Binding Evidentirao}" FontSize="18" Grid.Row="1"  Grid.Column="2"></Label>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Datum:   " Grid.Row="2" Style="{StaticResource labelStyleRow}" />
+                    <Label x:Name="Datum" Text="{Binding Datum}" FontSize="18" Grid.Row="2" Grid.Column="3" ></Label>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Vrijeme:   " Grid.Row="3" Style="{StaticResource labelStyleRow}"/>
+                    <Label x:Name="Vrijeme" Text="{Binding Vrijeme}" FontSize="18" Grid.Row="3" Grid.Column="4" ></Label>
+            </StackLayout>
+        </StackLayout>
+         
+        <StackLayout Orientation="Vertical" Margin="0,30,0,0">
+            <Label Text="Recept "  Style="{StaticResource labelStyleRow}"/>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Lijek" FontSize="18" Style="{StaticResource labelStyleRow}"></Label>
+                    <Label x:Name="Lijek" Text="{Binding Lijek}" FontSize="18" ></Label>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Količina" FontSize="18" Style="{StaticResource labelStyleRow}"></Label>
+                    <Label x:Name="Količina" Text="{Binding Kolicina}" FontSize="18" ></Label>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Napomena" FontSize="18" Style="{StaticResource labelStyleRow}"></Label>
+                    <Label x:Name="Napomena" Text="{Binding Napomena}" FontSize="18" ></Label>
+                </StackLayout>
+        </StackLayout>
+            <StackLayout Margin="0,30,0,0">
+                <Slider Minimum="0" Maximum="5" ThumbColor="Gold" MinimumTrackColor="white" Margin="0,0,40,0" MaximumTrackColor="DimGray" ValueChanged="OnSliderValueChanged"></Slider>
+                <Label Style="{StaticResource labelStyleRow}" Text="{Binding Ocjena, Mode=OneWay, StringFormat='Ocjena: {0}'}" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand" Margin="0,30,0,0">
+                <Button Text="Ocijeni uslugu" Command="{Binding OcijeniCommand}" WidthRequest="350"   CornerRadius="5"></Button>
+            </StackLayout>
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:viewmodels="clr-namespace:eOrdinacija.MobileApp.ViewModels" x:DataType="viewmodels:RegistracijaViewModel"
+             BackgroundImage="back.jpg"
+             NavigationPage.HasNavigationBar="false"
+             x:Class="eOrdinacija.MobileApp.Views.RegistracijaPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="labelStyle" TargetType="Label">
+                <Setter Property="FontFamily" Value="Tahoma" />
+                <Setter Property="TextColor" Value="white" />
+            </Style>
+            <Style x:Key="entryLabel" TargetType="Entry">
+                <Setter Property="FontFamily" Value="Tahoma" />
+                <Setter Property="TextColor" Value="black" />
+            </Style>
+            <Style x:Key="buttonStyle" TargetType="Button">
+                <Setter Property="CornerRadius" Value="5" />
+                <Setter Property="Margin" Value="0,10,0,0" />
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="FontFamily" Value="Tahoma" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout Padding="20,0,20,0" VerticalOptions="Center">
+            <Label Style="{StaticResource labelStyle}">Ime</Label>
+            <Entry Style="{StaticResource entryLabel}" Text="{Binding Ime}"></Entry>
+            <Label Style="{StaticResource labelStyle}">Prezime</Label>
+            <Entry Style="{StaticResource entryLabel}" Text="{Binding Prezime}"></Entry>
+            <Label Style="{StaticResource labelStyle}">Datum rođenja</Label>
+            <DatePicker Date="{Binding DatumRodjenja}"></DatePicker>
+            <Label Style="{StaticResource labelStyle}">Email</Label>
+            <Entry Style="{StaticResource entryLabel}" Text="{Binding Email}"></Entry>
+            <Label Style="{StaticResource labelStyle}">Broj telefona</Label>
+            <Entry Style="{StaticResource entryLabel}" Text="{Binding Telefon}"></Entry>
+            <Label Style="{StaticResource labelStyle}">Korisničko ime</Label>
+            <Entry Style="{StaticResource entryLabel}" Text="{Binding Username}"></Entry>
+            <Label Style="{StaticResource labelStyle}">Lozinka</Label>
+            <Entry Style="{StaticResource entryLabel}" IsPassword="True" Text="{Binding Password}"></Entry>
+            <Label Style="{StaticResource labelStyle}">Potvrda lozinke</Label>
+            <Entry Style="{StaticResource entryLabel}" IsPassword="True" Text="{Binding PasswordPotvrda}"></Entry>
+            <Button Style="{StaticResource buttonStyle}" Text="Potvrdi" Command="{Binding RegistracijaPotvrdiCommand}"  />
+            <Label IsVisible="{Binding IsBusy}" HorizontalOptions="Center" TextColor="White" Text="Učitavanje..."></Label>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:behaviors="http://xamarin.com/schemas/2020/toolkit"
+             Title="Dental tips and tricks"
+             BackgroundImage="back.jpg"
+             x:Class="eOrdinacija.MobileApp.Views.TipsAndTricksPage">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Frame BackgroundColor="GhostWhite" Margin="20,20,20,0" CornerRadius="5">
+                <behaviors:Expander>
+                    <behaviors:Expander.Header>
+                        <Label Text="Zašto se zubi kvare?" FontAttributes="Bold" Margin="5,0,5,5" FontSize="16" />
+                    </behaviors:Expander.Header>
+                    <Grid Padding="10">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Column="1"  Text="Kvarenju zubi najviše pogoduju namirnice i pića koje sadrže ugljikohidrate, odnosno šećeri i škrob. Bakterije koje žive u usnoj šupljini koriste ugljikohidrate za svoju prehranu pri čemu se razgradnjom stvara kiselina koja nagriza zubnu caklinu. Oštećenje zubne cakline omogućuje gubitak kalcija i fosfora, dva najvažnija minerala od kojih su zubi građeni. Tako počinje proces kvarenja zubi."/>
+                    </Grid>
+                </behaviors:Expander>
+                </Frame>
+                <Frame BackgroundColor="GhostWhite" Margin="20,0,20,0" CornerRadius="5">
+                    <behaviors:Expander>
+                    <behaviors:Expander.Header>
+                        <Label Text="Koliko često moram posjećivati stomatologa?" FontAttributes="Bold" Margin="5,0,5,5" FontSize="16" />
+                    </behaviors:Expander.Header>
+                    <Grid Padding="10">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Column="1" Text="Stomatologa bi trebalo posjetiti najmanje 2 puta godišnje. Nažalost u našem društvu sasvim je uobičajeno da se stomatologa posjećuje samo onda kada je krajnje vrijeme, odnosno kada zub zaboli. Ovisno o stanju u vašoj usnoj šupljini stomatolog će odrediti koliko često biste ga trebali posjećivati. Osobe koje su sklone karijesu (ukoliko se karijes pojavljuje unatoč dobroj higijeni) stomatologa bi trebale posjećivati češće."/>
+                    </Grid>
+                </behaviors:Expander>
+                </Frame>
+                <Frame BackgroundColor="GhostWhite" Margin="20,0,20,0" CornerRadius="5">
+                <behaviors:Expander>
+                    <behaviors:Expander.Header>
+                        <Label Text="Kada dijete treba početi samostalno prati zube?" FontAttributes="Bold" Margin="5,0,5,5" FontSize="16" />
+                    </behaviors:Expander.Header>
+                    <Grid Padding="10">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Column="1" Text="Većina roditelja griješi jer prerano prepušta djetetu da samostalno pere zube. Dob kada dijete može samostalno prati zube vrlo je individualna. Najčešće ovisi o angažiranosti roditelja u održavanju oralne higijene djeteta. Kada dijete počne pokazivati inicijativu za pranje zubi, roditelj treba dobro i pravilno oprati djetetu zube i tek onda djetetu prepustiti da ih samo opere. Dijete treba kroz igru nastojati ponoviti Vaše kretnje. Ta faza prelaska na samostalno pranje zubi može trajati više mjeseci."/>
+                    </Grid>
+                </behaviors:Expander>
+                </Frame>
+                <Frame BackgroundColor="GhostWhite" Margin="20,0,20,0" CornerRadius="5">
+                    <behaviors:Expander>
+                    <behaviors:Expander.Header>
+                        <Label Text="Kako mogu spriječiti nastanak karijesa i bolesti desni?" FontAttributes="Bold" Margin="5,0,5,5" FontSize="16" />
+                    </behaviors:Expander.Header>
+                    <Grid Padding="10">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Column="1" Text="Dobra oralna higijena počinje kod kuće. Uz nju se preporučuje odlazak stomatologu svakih 6 mjeseci. Četkajte zube barem dvaput dnevno mekom ili srednje tvrdom četkicom i pastom koja sadržava fluor, mijenjajte četkicu svaka dva do tri mjeseca, čistite zube zubnim koncem svaki dan i dvaput godišnje posjetite stomatologa. Stomatolog će vam ukloniti kamenac i plak te će, u slučaju nastanka karijesa, pravodobnom reakcijom spriječiti njegovo širenje, pa tako i potrebu za nekim većim i skupljim zahvatom."/>
+                    </Grid>
+                </behaviors:Expander>
+                </Frame>
+                <Frame BackgroundColor="GhostWhite" Margin="20,0,20,0" CornerRadius="5">
+                    <behaviors:Expander>
+                    <behaviors:Expander.Header>
+                        <Label Text="Zašto je implantat najbolja opcija u slučaju izgubljenog zuba?" FontAttributes="Bold" Margin="5,0,5,5" FontSize="16" />
+                    </behaviors:Expander.Header>
+                    <Grid Padding="10">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Column="1" Text="U slučaju gubitka zuba ugradnja implantata je najbolja opcija. Implantat je titanski vijak koji imitira korijen izgubljenog zuba i nakon sto se oseointegrira i učvrsti (stvori se oko njega nova kost koja sraste s okolnom kosti) izarađuje se kruna zuba. Na taj način susjedni zubi ostaju sačuvani, bez potrebe za brušenjem i izradom krunica i mostova. Implantati su izrađeni od materijala koji su biokompatibilni i potpuno neškodljivi za organizam, imaju doživotnu garanciju i pružaju osjećaj najbliži prirodnom zubu.  U slučaju nedostatka svih zuba ugrađuje se više implantata na kojima je moguće izraditi most ili protezu i postići puno veću stabilnost i ugodu za pacijenta."/>
+                    </Grid>
+                </behaviors:Expander>
+                </Frame>
+                <Frame BackgroundColor="GhostWhite" Margin="20,0,20,0" CornerRadius="5">
+                    <behaviors:Expander>
+                    <behaviors:Expander.Header>
+                        <Label Text="Hoće li se implantat 'prihvatiti'?" FontAttributes="Bold" Margin="5,0,5,5" FontSize="16" />
+                    </behaviors:Expander.Header>
+                    <Grid Padding="10">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Column="1" Text="Uspješnost terapije zubnim implantatima je gotovo 99% te su komplikacije izrazito rijetke, a ukoliko dođe do odbacivanja implantata to se gotovo uvijek dogodi u prvih 6 mjeseci nakon ugradnje, a prije izrade zuba na implantatu. U tom slučaju zahvat se ponavlja, a odbačeni implantat vraća se proizvođaču."/>
+                    </Grid>
+                </behaviors:Expander>
+                </Frame>
+                <Frame BackgroundColor="GhostWhite" Margin="20,0,20,0" CornerRadius="5">
+                    <behaviors:Expander>
+                    <behaviors:Expander.Header>
+                        <Label Text="Da li je prije ugradnje implantata potreban dodatni hirurški zahvat?" FontAttributes="Bold" Margin="5,0,5,5" FontSize="16" />
+                    </behaviors:Expander.Header>
+                    <Grid Padding="10">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Column="1" Text="Ponekad je zaista potrebno prije ugradnje implantata učiniti dodatni zahvat. Najčešći razlog je nedostatak kosti u koju se planira ugradnja ili nedovoljna širina koštanog grebena. Tada se pristupa ili augmentaciji sinusa (sinus lift) ili postupku nadogradnje kosti koji su u pravilu kompliciraniji zahvati od same ugradnje i izvode se također u lokalnoj anesteziji. Ponekad je moguće navedene zahvate učiniti u istom aktu kada se ugrađuje implantat."/>
+                    </Grid>
+                </behaviors:Expander>
+                </Frame>
+                <Frame BackgroundColor="GhostWhite" Margin="20,0,20,0" CornerRadius="5">
+                    <behaviors:Expander>
+                    <behaviors:Expander.Header>
+                        <Label Text="Da li je ugradnja implantata bolan proces za pacijenta?" FontAttributes="Bold" Margin="5,0,5,5" FontSize="16" />
+                    </behaviors:Expander.Header>
+                    <Grid Padding="10">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Column="1" Text="Ugradnja implantata nije bolan proces. Izvodi se u lokalnoj anesteziji koja omogućava potpunu analgeziju (odsustvo boli).  Nakon operacije pacijent se mora pridržavati uputa koje će dobiti od svog oralnog hirurga, a pridržavanje uputa garantira uspjeh implantacije."/>
+                    </Grid>
+                </behaviors:Expander>
+                </Frame>
+                <Frame BackgroundColor="GhostWhite" Margin="20,0,20,0" CornerRadius="5">
+                    <behaviors:Expander>
+                    <behaviors:Expander.Header>
+                        <Label Text="Da li je izbjeljivanje zubi štetno?" FontAttributes="Bold" Margin="5,0,5,5" FontSize="16" />
+                    </behaviors:Expander.Header>
+                    <Grid Padding="10">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Column="1" Text="Izbjeljivanje se danas smatra sigurnom i pouzdanom metodom. Ako su vaši zubi zdravi ili adekvatno sanirani plombama, dobar ste kandidat za izbjeljivanje. Moguće neželjene posljedice traju najviše dva do tri dana, a manifestiraju se kao osjetljivost zubi na toplo, hladno, slatko ili kiselo. Preporučuje se da se izbjeljivanje vrši uz stručan nadzor, profesionalnim i provjerenim sredstvima. Ipak, imajte na umu kako je pretjerano izbjeljivanje (više od dva puta godišnje) štetno za zubnu caklinu. Zube svakako perite redovito (iza svakog obroka), te izbjegavajte pušenje, konzumaciju crnog vina, currya, crnog čaja i sličnih napitaka."/>
+                    </Grid>
+                </behaviors:Expander>
+                </Frame>
+                <Frame BackgroundColor="GhostWhite" Margin="20,0,20,20" CornerRadius="5">
+                    <behaviors:Expander>
+                    <behaviors:Expander.Header>
+                        <Label Text="3D rendgenska snimka ili ortopan? Kada i zašto?" FontAttributes="Bold" Margin="5,0,5,5" FontSize="16" />
+                    </behaviors:Expander.Header>
+                    <Grid Padding="10">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Column="1" Text="Za ugradnju dentalnih implantata i predimplantološku hirurgiju sinusa ili alveolarnog grebena gotovo u pravilu za dijagnostiku i planiranje koristimo 3D snimke ( CBCT ). Za izradu krunica i mostova te dijagnozu jednostavnijih bolesti zuba i čeljusti standardni orotopantomogram ( ortopan ) daje sasvim dovoljno informacija."/>
+                    </Grid>
+                </behaviors:Expander>
+                </Frame>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
