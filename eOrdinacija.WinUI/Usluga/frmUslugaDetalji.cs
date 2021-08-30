@@ -16,6 +16,7 @@ namespace eOrdinacija.WinUI.Usluga
         private int? _id = null;
         private int? _idNew = null;
         private readonly APIService uslugaService = new APIService("Usluga");
+        private readonly APIService ulogaService = new APIService("Uloga");
         private readonly APIService uslugaMaterijalService = new APIService("UslugaMaterijal");
         private readonly APIService materijalService = new APIService("StomatoloskiMaterijal");
         private bool dragging = false;

@@ -1,5 +1,6 @@
 ﻿using eOrdinacija.Model.Requests;
 using eOrdinacija_API.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -8,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace eOrdinacija_API.Controllers
 {
+    [Authorize(AuthenticationSchemes = "BasicAuthentication")]
     [Route("api/[controller]")]
     [ApiController]
     public class OcjenaController : ControllerBase

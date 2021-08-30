@@ -89,5 +89,21 @@ namespace eOrdinacija_API.Services
             _context.SaveChanges();
             return _mapper.Map<eOrdinacija.Model.Klijent>(entity);
         }
+
+        public eOrdinacija.Model.Klijent Authenticiraj(string username, string password)
+        {
+            var user = _context.Klijent.FirstOrDefault(x => x.Username == username);
+
+            if (user != null)
+            {
+                var newHash = Util.GenerateHash(user.PasswordSalt, password);
+
+                if (newHash == user.PasswordHash)
+                {
+                    return _mapper.Map<eOrdinacija.Model.Klijent>(user);
+                }
+            }
+            return null;
+        }
     }
 }

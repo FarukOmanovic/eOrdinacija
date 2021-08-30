@@ -15,6 +15,7 @@ namespace eOrdinacija.WinUI.Lijek
     public partial class frmLijekovi : Form
     {
         private readonly APIService _apiService = new APIService("Lijek");
+        private readonly APIService _ulogaService = new APIService("Uloga");
 
         public frmLijekovi()
         {
@@ -24,6 +25,9 @@ namespace eOrdinacija.WinUI.Lijek
         private async void frmLijekovi_Load(object sender, EventArgs e)
         {
             var result = await _apiService.Get<List<eOrdinacija.Model.Lijek>>(null);
+            var uloga = await _ulogaService.GetById<eOrdinacija.Model.Uloga>(Global.LoggedUser.UlogaId);
+
+            btnNoviLijek.Enabled = uloga.Naziv == "Sestra" && Global.LoggedUser.isAdministrator == false ? false : true;
             dgvLijekovi.DataSource = result;
         }
 

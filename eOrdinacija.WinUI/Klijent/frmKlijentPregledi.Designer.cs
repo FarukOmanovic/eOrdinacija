@@ -62,7 +62,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(46, 263);
+            this.label4.Location = new System.Drawing.Point(62, 263);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(114, 34);
             this.label4.TabIndex = 30;
@@ -74,7 +74,7 @@
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.Black;
-            this.label10.Location = new System.Drawing.Point(46, 126);
+            this.label10.Location = new System.Drawing.Point(62, 126);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(209, 21);
             this.label10.TabIndex = 28;
@@ -86,7 +86,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(46, 96);
+            this.label3.Location = new System.Drawing.Point(62, 96);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(85, 21);
             this.label3.TabIndex = 22;
@@ -98,7 +98,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(46, 42);
+            this.label1.Location = new System.Drawing.Point(62, 42);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(340, 34);
             this.label1.TabIndex = 20;
@@ -110,7 +110,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(46, 156);
+            this.label2.Location = new System.Drawing.Point(62, 156);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(153, 21);
             this.label2.TabIndex = 32;
@@ -122,7 +122,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(46, 186);
+            this.label5.Location = new System.Drawing.Point(62, 186);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(161, 21);
             this.label5.TabIndex = 33;
@@ -134,7 +134,7 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(46, 216);
+            this.label6.Location = new System.Drawing.Point(62, 216);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(75, 21);
             this.label6.TabIndex = 34;
@@ -146,7 +146,7 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(46, 317);
+            this.label7.Location = new System.Drawing.Point(62, 317);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(137, 21);
             this.label7.TabIndex = 35;
@@ -158,7 +158,7 @@
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(46, 347);
+            this.label8.Location = new System.Drawing.Point(62, 347);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(84, 21);
             this.label8.TabIndex = 36;
@@ -170,7 +170,7 @@
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(47, 377);
+            this.label9.Location = new System.Drawing.Point(63, 377);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(108, 21);
             this.label9.TabIndex = 37;
@@ -180,10 +180,10 @@
             // 
             this.txtNapomena.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNapomena.ForeColor = System.Drawing.Color.Black;
-            this.txtNapomena.Location = new System.Drawing.Point(50, 415);
+            this.txtNapomena.Location = new System.Drawing.Point(66, 415);
             this.txtNapomena.Multiline = true;
             this.txtNapomena.Name = "txtNapomena";
-            this.txtNapomena.Size = new System.Drawing.Size(336, 130);
+            this.txtNapomena.Size = new System.Drawing.Size(405, 130);
             this.txtNapomena.TabIndex = 38;
             // 
             // labelPacijent
@@ -192,7 +192,7 @@
             this.labelPacijent.BackColor = System.Drawing.Color.Transparent;
             this.labelPacijent.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelPacijent.ForeColor = System.Drawing.Color.White;
-            this.labelPacijent.Location = new System.Drawing.Point(138, 96);
+            this.labelPacijent.Location = new System.Drawing.Point(154, 96);
             this.labelPacijent.Name = "labelPacijent";
             this.labelPacijent.Size = new System.Drawing.Size(0, 21);
             this.labelPacijent.TabIndex = 39;
@@ -203,7 +203,7 @@
             this.labelZaposlenik.BackColor = System.Drawing.Color.Transparent;
             this.labelZaposlenik.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelZaposlenik.ForeColor = System.Drawing.Color.White;
-            this.labelZaposlenik.Location = new System.Drawing.Point(261, 126);
+            this.labelZaposlenik.Location = new System.Drawing.Point(277, 126);
             this.labelZaposlenik.Name = "labelZaposlenik";
             this.labelZaposlenik.Size = new System.Drawing.Size(0, 21);
             this.labelZaposlenik.TabIndex = 40;
@@ -214,7 +214,7 @@
             this.labelDatum.BackColor = System.Drawing.Color.Transparent;
             this.labelDatum.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDatum.ForeColor = System.Drawing.Color.White;
-            this.labelDatum.Location = new System.Drawing.Point(205, 156);
+            this.labelDatum.Location = new System.Drawing.Point(221, 156);
             this.labelDatum.Name = "labelDatum";
             this.labelDatum.Size = new System.Drawing.Size(0, 21);
             this.labelDatum.TabIndex = 41;
@@ -225,7 +225,7 @@
             this.labelVrijeme.BackColor = System.Drawing.Color.Transparent;
             this.labelVrijeme.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelVrijeme.ForeColor = System.Drawing.Color.White;
-            this.labelVrijeme.Location = new System.Drawing.Point(213, 186);
+            this.labelVrijeme.Location = new System.Drawing.Point(229, 186);
             this.labelVrijeme.Name = "labelVrijeme";
             this.labelVrijeme.Size = new System.Drawing.Size(0, 21);
             this.labelVrijeme.TabIndex = 42;
@@ -236,7 +236,7 @@
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Image = global::eOrdinacija.WinUI.Properties.Resources.Close_16;
-            this.button1.Location = new System.Drawing.Point(398, 12);
+            this.button1.Location = new System.Drawing.Point(505, 12);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(26, 25);
             this.button1.TabIndex = 47;
@@ -247,9 +247,9 @@
             // 
             this.comboBoxUsluge.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxUsluge.FormattingEnabled = true;
-            this.comboBoxUsluge.Location = new System.Drawing.Point(127, 211);
+            this.comboBoxUsluge.Location = new System.Drawing.Point(143, 211);
             this.comboBoxUsluge.Name = "comboBoxUsluge";
-            this.comboBoxUsluge.Size = new System.Drawing.Size(259, 26);
+            this.comboBoxUsluge.Size = new System.Drawing.Size(328, 26);
             this.comboBoxUsluge.TabIndex = 48;
             this.comboBoxUsluge.Validating += new System.ComponentModel.CancelEventHandler(this.comboBoxUsluge_Validating);
             // 
@@ -257,9 +257,9 @@
             // 
             this.comboBoxLijekovi.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxLijekovi.FormattingEnabled = true;
-            this.comboBoxLijekovi.Location = new System.Drawing.Point(189, 312);
+            this.comboBoxLijekovi.Location = new System.Drawing.Point(205, 312);
             this.comboBoxLijekovi.Name = "comboBoxLijekovi";
-            this.comboBoxLijekovi.Size = new System.Drawing.Size(197, 26);
+            this.comboBoxLijekovi.Size = new System.Drawing.Size(266, 26);
             this.comboBoxLijekovi.TabIndex = 49;
             // 
             // btnSnimi
@@ -269,9 +269,9 @@
             this.btnSnimi.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSnimi.ForeColor = System.Drawing.Color.White;
             this.btnSnimi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSnimi.Location = new System.Drawing.Point(50, 648);
+            this.btnSnimi.Location = new System.Drawing.Point(66, 648);
             this.btnSnimi.Name = "btnSnimi";
-            this.btnSnimi.Size = new System.Drawing.Size(336, 50);
+            this.btnSnimi.Size = new System.Drawing.Size(405, 50);
             this.btnSnimi.TabIndex = 50;
             this.btnSnimi.Text = "Snimi";
             this.btnSnimi.UseVisualStyleBackColor = false;
@@ -280,9 +280,9 @@
             // txtKolicina
             // 
             this.txtKolicina.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtKolicina.Location = new System.Drawing.Point(136, 341);
+            this.txtKolicina.Location = new System.Drawing.Point(152, 341);
             this.txtKolicina.Name = "txtKolicina";
-            this.txtKolicina.Size = new System.Drawing.Size(250, 26);
+            this.txtKolicina.Size = new System.Drawing.Size(319, 26);
             this.txtKolicina.TabIndex = 51;
             // 
             // btnPrintaj
@@ -292,9 +292,9 @@
             this.btnPrintaj.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPrintaj.ForeColor = System.Drawing.Color.White;
             this.btnPrintaj.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPrintaj.Location = new System.Drawing.Point(50, 575);
+            this.btnPrintaj.Location = new System.Drawing.Point(66, 575);
             this.btnPrintaj.Name = "btnPrintaj";
-            this.btnPrintaj.Size = new System.Drawing.Size(336, 50);
+            this.btnPrintaj.Size = new System.Drawing.Size(405, 50);
             this.btnPrintaj.TabIndex = 52;
             this.btnPrintaj.Text = "Printaj recept";
             this.btnPrintaj.UseVisualStyleBackColor = false;
@@ -318,7 +318,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::eOrdinacija.WinUI.Properties.Resources.back;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(449, 735);
+            this.ClientSize = new System.Drawing.Size(543, 735);
             this.Controls.Add(this.btnPrintaj);
             this.Controls.Add(this.txtKolicina);
             this.Controls.Add(this.btnSnimi);

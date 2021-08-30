@@ -26,10 +26,12 @@ namespace eOrdinacija.WinUI.Zaposlenik
         {
             var uloge = await ulogaService.Get<List<eOrdinacija.Model.Uloga>>(null);
             var zaposlenik = await _service.GetById<eOrdinacija.Model.Zaposlenik>(Global.LoggedUser.Id);
+
             comboBoxUloge.DisplayMember = "Naziv";
             comboBoxUloge.ValueMember = "Id";
             comboBoxUloge.DataSource = uloge;
             comboBoxUloge.SelectedValue = zaposlenik.UlogaId;
+            comboBoxUloge.Enabled = Global.LoggedUser.isAdministrator == true ? true : false;
             txtIme.Text = zaposlenik.Ime;
             txtPrezime.Text = zaposlenik.Prezime;
             txtTelefon.Text = zaposlenik.BrojTelefona;

@@ -4,10 +4,12 @@ using System.Linq;
 using System.Threading.Tasks;
 using eOrdinacija.Model.Requests;
 using eOrdinacija_API.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace eOrdinacija_API.Controllers
 {
+    [Authorize(AuthenticationSchemes = "BasicAuthentication")]
     [Route("api/[controller]")]
     [ApiController]
     public class UslugaController : ControllerBase
@@ -44,12 +46,14 @@ namespace eOrdinacija_API.Controllers
             return _service.GetByName(name);
         }
 
+        [Authorize(Roles = "Administrator,Stomatolog,Sestra")]
         [HttpPost]
         public eOrdinacija.Model.Usluga Insert(UslugaInsertRequest request)
         {
             return _service.Insert(request);
         }
 
+        [Authorize(Roles = "Administrator,Stomatolog,Sestra")]
         [HttpPut("{id}")]
         public eOrdinacija.Model.Usluga Update(int id, UslugaInsertRequest request)
         {

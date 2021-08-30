@@ -20,7 +20,7 @@ namespace eOrdinacija.WinUI.Klijent
         private Point dragCursorPoint;
         private Point dragFormPoint;
         private readonly APIService _service = new APIService("Pregled");
-        private readonly APIService _klijentService = new APIService("Klijent");
+        private readonly APIService _klijentService = new APIService("Klijent"); 
         private readonly APIService _zaposlenikService = new APIService("Zaposlenik");
         private readonly APIService _uslugaService = new APIService("Usluga");
         private readonly APIService _lijekService = new APIService("Lijek");

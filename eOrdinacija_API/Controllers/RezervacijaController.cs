@@ -4,10 +4,12 @@ using System.Linq;
 using System.Threading.Tasks;
 using eOrdinacija.Model.Requests;
 using eOrdinacija_API.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace eOrdinacija_API.Controllers
 {
+    [Authorize(AuthenticationSchemes = "BasicAuthentication")]
     [Route("api/[controller]")]
     [ApiController]
     public class RezervacijaController : ControllerBase
@@ -18,6 +20,7 @@ namespace eOrdinacija_API.Controllers
             _service = service;
         }
 
+        [Authorize(Roles = "Administrator,Stomatolog,Sestra")]
         [HttpGet]
         public List<eOrdinacija.Model.Rezervacija> Get()
         {
@@ -37,6 +40,7 @@ namespace eOrdinacija_API.Controllers
             return _service.GetById(id);
         }
 
+        [Authorize(Roles = "Administrator,Stomatolog,Sestra")]
         [HttpGet]
         [Route("GetByDates/{dateFrom}/{dateTo}")]
         public List<eOrdinacija.Model.Rezervacija> GetByDates(DateTime dateFrom, DateTime dateTo)
@@ -44,6 +48,7 @@ namespace eOrdinacija_API.Controllers
             return _service.GetByDates(dateFrom,dateTo);
         }
 
+        [Authorize(Roles = "Administrator,Klijent")]
         [HttpPost]
         public eOrdinacija.Model.Rezervacija Insert(RezervacijaInsertRequest request)
         {

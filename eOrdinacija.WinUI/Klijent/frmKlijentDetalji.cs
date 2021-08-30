@@ -17,6 +17,7 @@ namespace eOrdinacija.WinUI.Klijent
         private readonly APIService _uslugaService = new APIService("Usluga");
         private readonly APIService _klijentService = new APIService("Klijent");
         private readonly APIService _zaposlenikService = new APIService("Zaposlenik");
+        private readonly APIService _ulogaService = new APIService("Uloga");
 
         public frmKlijentDetalji(int? id = null)
         {
@@ -31,6 +32,8 @@ namespace eOrdinacija.WinUI.Klijent
             {
                 var stavke = await _apiService.GetByKlijent<List<eOrdinacija.Model.Pregled>>(_id);
                 var klijent = await _klijentService.GetById<eOrdinacija.Model.Klijent>(_id);
+                var uloga = await _ulogaService.GetById<eOrdinacija.Model.Uloga>(Global.LoggedUser.UlogaId);
+                btnNoviPregled.Enabled = uloga.Naziv == "Sestra" && Global.LoggedUser.isAdministrator == false ? false : true;
                 labelImePrezime.Text = klijent.Ime + " " + klijent.Prezime;
                 labelDatum.Text = klijent.DatumRodjenja.ToString();
                 labelTelefon.Text = klijent.BrojTelefona;

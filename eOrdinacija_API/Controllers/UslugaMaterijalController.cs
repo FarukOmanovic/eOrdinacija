@@ -4,10 +4,12 @@ using System.Linq;
 using System.Threading.Tasks;
 using eOrdinacija.Model.Requests;
 using eOrdinacija_API.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace eOrdinacija_API.Controllers
 {
+    [Authorize(AuthenticationSchemes = "BasicAuthentication")]
     [Route("api/[controller]")]
     [ApiController]
     public class UslugaMaterijalController : ControllerBase
@@ -25,12 +27,14 @@ namespace eOrdinacija_API.Controllers
             return _service.GetByUsluga(id);
         }
 
+        [Authorize(Roles = "Administrator,Stomatolog,Sestra")]
         [HttpDelete("{id}")]
         public void Remove(int id)
         {
             _service.Remove(id);
         }
 
+        [Authorize(Roles = "Administrator,Stomatolog,Sestra")]
         [HttpPost]
         public eOrdinacija.Model.UslugaMaterijal Insert(UslugaMaterijalInsertRequest request)
         {

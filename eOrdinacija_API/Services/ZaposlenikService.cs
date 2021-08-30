@@ -30,9 +30,9 @@ namespace eOrdinacija_API.Services
 
             if (user != null)
             {
-                var newHash = Util.GenerateHash(user.PasswordHash, password);
+                var newHash = Util.GenerateHash(user.PasswordSalt, password);
 
-                if (newHash == user.PasswordSalt)
+                if (newHash == user.PasswordHash)
                 {
                     return _mapper.Map<eOrdinacija.Model.Zaposlenik>(user);
                 }

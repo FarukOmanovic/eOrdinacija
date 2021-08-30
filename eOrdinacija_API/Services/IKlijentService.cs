@@ -13,6 +13,8 @@ namespace eOrdinacija_API.Services
         eOrdinacija.Model.Klijent GetByName(string name);
         eOrdinacija.Model.Klijent Insert(KlijentInsertRequest request);
         eOrdinacija.Model.Klijent Update(int id, KlijentInsertRequest request);
+        eOrdinacija.Model.Klijent Authenticiraj(string username, string password);
+
 
     }
 }

@@ -4,10 +4,13 @@ using System.Linq;
 using System.Threading.Tasks;
 using eOrdinacija.Model.Requests;
 using eOrdinacija_API.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace eOrdinacija_API.Controllers
 {
+    [Authorize(AuthenticationSchemes = "BasicAuthentication")]
+    [Authorize(Roles = "Administrator,Stomatolog,Sestra")]
     [Route("api/[controller]")]
     [ApiController]
     public class NabavkaController : ControllerBase
